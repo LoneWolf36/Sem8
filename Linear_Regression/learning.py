@@ -11,7 +11,7 @@ def compute_error_for_given_points(b, m, x, y):
 def gradient_descent(x, y, learning_rate, initial_b, initial_m, num_iterations):
     b = initial_b
     m = initial_m
-    for i in range(num_iterations):
+    for _ in range(num_iterations):
         b, m = step_gradient_descent(x, y, b, m, learning_rate)
     return (b, m)
 
