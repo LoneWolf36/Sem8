@@ -5,8 +5,10 @@ def gcd(a, b):  # calculates GCD of a and b
         b = c
     return a
 
-# multiplicative inverse of 'a'  
-# under modulo 'm' 
+# multiplicative inverse of 'a'
+# under modulo 'm'
+
+
 def modinv(a, m):
     for x in range(1, m):
         if (a * x) % m == 1:
@@ -47,14 +49,14 @@ if __name__ == "__main__":
     p = int(input('Enter prime p: '))
 
     for i in range(2, p):
-        if(p%i == 0):
+        if(p % i == 0):
             print("p isnt prime:", p)
             exit(0)
 
     q = int(input('Enter prime q: '))
-  
+
     for i in range(2, q):
-        if(q%i == 0):
+        if(q % i == 0):
             print("q isnt prime:", q)
             exit(0)
 
@@ -86,3 +88,15 @@ if __name__ == "__main__":
     print("Encrypted message: ", enc, "\n")
     dec = decrypt_string(enc)
     print("Decrypted message: " + dec + "\n")
+
+    """
+    Alice generates her RSA keys by selecting two primes: p=11 and q=13. The modulus is n=p×q=143. The totient is n ϕ(n)=(p−1)x(q−1)=120. She chooses 7 for her RSA public key e and calculates her RSA private key using the Extended Euclidean algorithm, which gives her 103.
+
+    Bob wants to send Alice an encrypted message, M, so he obtains her RSA public key (n, e) which, in this example, is (143, 7). His plaintext message is just the number 9 and is encrypted into ciphertext, C, as follows:
+
+    Me mod n = 97 mod 143 = 48 = C
+
+    When Alice receives Bob's message, she decrypts it by using her RSA private key (d, n) as follows:
+
+    Cd mod n = 48103 mod 143 = 9 = M
+    """
