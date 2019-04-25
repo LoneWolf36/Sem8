@@ -126,3 +126,15 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+"""
+Key Differences Between DES and AES
+
+    The basic difference between DES and AES is that the block in DES is divided into two halves before further processing whereas, in AES entire block is processed to obtain ciphertext.
+    The DES algorithm works on the Feistel Cipher principle, and the AES algorithm works on substitution and permutation principle.
+    The key size of DES is 56 bit which is comparatively smaller than AES which has 128,192, or 256-bit secret key.
+    The rounds in DES include Expansion Permutation, Xor, S-box, P-box, Xor and Swap. On the other hands, rounds in AES include Subbytes, Shiftrows, Mix columns, Addroundkeys.
+    DES is less secure than AES because of the small key size.
+    AES is comparatively faster than DES.
+
+"""
